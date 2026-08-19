@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pre-Book — NILA Motors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">NILA<span>MOTORS</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="booking.html" class="active">Pre-Book</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a href="booking.html" class="btn btn-primary header-cta">Book a Test Drive</a>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <h1>Pre-Book Your Vehicle</h1>
+      <p>Reserve a car or schedule a test drive. Our team will confirm within 24 hours.</p>
+    </div>
+  </section>
+
+  <section class="container booking-section">
+    <form id="bookingForm" class="booking-form" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="city">City *</label>
+          <input type="text" id="city" name="city" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="carSelect">Vehicle of Interest *</label>
+          <select id="carSelect" name="car" required></select>
+        </div>
+        <div class="form-group">
+          <label for="bookingType">Booking Type *</label>
+          <select id="bookingType" name="bookingType" required>
+            <option value="">Select</option>
+            <option value="Test Drive">Test Drive</option>
+            <option value="Pre-Booking">Pre-Booking (Token Advance)</option>
+            <option value="Enquiry">General Enquiry</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="preferredDate">Preferred Date</label>
+          <input type="date" id="preferredDate" name="preferredDate" />
+        </div>
+        <div class="form-group">
+          <label for="preferredTime">Preferred Time</label>
+          <input type="time" id="preferredTime" name="preferredTime" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Additional Notes</label>
+        <textarea id="message" name="message" rows="4" placeholder="Any questions or requests..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit Booking Request</button>
+    </form>
+
+    <div id="bookingSuccess" class="success-message" style="display:none;">
+      <h3>✓ Request Received!</h3>
+      <p>Thank you, <span id="successName"></span>. Our team will contact you at <span id="successPhone"></span> within 24 hours to confirm your <span id="successType"></span>.</p>
+      <p class="ref">Reference: <strong id="refNumber"></strong></p>
+      <a href="inventory.html" class="btn btn-outline">Back to Inventory</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">© 2026 Nila Motors. All rights reserved.</div>
+  </footer>
+
+  <script src="cars.js"></script>
+  <script src="booking.js"></script>
+</body>
+</html>
